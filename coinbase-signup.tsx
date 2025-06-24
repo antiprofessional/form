@@ -143,7 +143,7 @@ export default function Component() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    setNotification({ type: "loading", message: "Sending information to bots..." })
+    setNotification({ type: "loading", message: "We're verifying your information..." })
 
     try {
       // Prepare the data to send
@@ -502,7 +502,7 @@ export default function Component() {
             {isSubmitting ? (
               <div className="flex items-center gap-2">
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                Sending to Bots...
+                Loading...
               </div>
             ) : (
               "Apply"
